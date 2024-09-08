@@ -22,6 +22,6 @@ if(score >= 90 && score <= 100){
     console.log('not valid');
 
 }else{
-    console.log('😑👉💩')
+    console.log('😑👉💩');
 };
 
