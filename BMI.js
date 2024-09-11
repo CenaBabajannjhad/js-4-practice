@@ -13,7 +13,7 @@ if (bmi < 18.5) {
   classification = 'Overweight';
 } else {
   classification = 'Obese';
-}
+};
 
 
 
