@@ -1,0 +1,1 @@
+const celsiusToFahrenheit = cel => (cel * 9/5) + 32;
