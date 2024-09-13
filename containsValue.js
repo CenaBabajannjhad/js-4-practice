@@ -1,0 +1,1 @@
+const containsValue  = (arr , value) => arr.includes(value) ? `the array contain the value at index ${arr.indexOf(value)}` : 'the array dose not contain the value';
