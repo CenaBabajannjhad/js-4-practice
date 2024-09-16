@@ -22,4 +22,5 @@ function isPerfectNumber(num) {
 
   
   return false;
-}
+};
+
