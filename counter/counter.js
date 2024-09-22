@@ -3,7 +3,8 @@ const hourInputElement = document.querySelector('#hour');
 const minInputElement = document.querySelector('#min');
 const hourPlace = document.querySelector('#hour-place');
 const minPlace = document.querySelector('#min-place');
-let hourInputValue , minInputValue;
+const secPlace = document.querySelector('#sec-place');
+let hourInputValue , minInputValue , secValue;
 // submit event
 formElement.addEventListener('submit' , submitHandler);
 
@@ -14,6 +15,7 @@ function submitHandler(e){
     // get input values
     hourInputValue = getInputValue(hourInputElement);
     minInputValue = getInputValue(minInputElement);
+    secValue = 59;
     // calculate input values
     setInterval(() => {
         counterCalc();
@@ -25,7 +27,30 @@ function submitHandler(e){
 
 // counter calc
 function counterCalc(){
-// code...
+    changeTextContentNodes(secPlace , secValue);
+    changeTextContentNodes(minPlace , minInputValue);
+    changeTextContentNodes(hourPlace , hourInputValue);
+
+    // sec
+    if(secValue === 0){
+        secValue = 59;
+    }else{
+        secValue--;
+    }
+    // min
+    if(secValue === 0 && minInputValue > 0){
+        minInputValue--;
+    }
+    // hour
+    if(minInputValue === 0 && hourInputValue > 0){
+        hourInputValue--;
+        minInputValue = 59;
+    }
+
+    if(hourInputValue === 0 && minInputValue === 0){
+        alert('time finished');
+    }
+
 }
 // change element textContents
 function changeTextContentNodes(element , value){
