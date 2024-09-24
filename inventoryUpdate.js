@@ -2,12 +2,6 @@ const inventory = ["mouse", "keyboard", "monitor", "laptop", "printer"];
 const searchTerm = "laptop";
 
 
-
-
-
-
-
-
 // a function make check the array if have laptop add it into end of array , if it's dosen't exits add laptop in end of array
 const inventoryUpdate = (arr , searchValue) => {
     let indexOfSearchValue = arr.indexOf(searchValue);
